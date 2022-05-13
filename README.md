@@ -1,7 +1,9 @@
 # A Detailed Analysis of Raw Sensor Distance Readings
 ## Overview
 
-For now focused primarily on the "Hoyt & 5th" sensor, this repo contains all Python code and data analysis on how variations of sensor distance measurements interacting with [local weather data](##-Weather-Data).
+For now focused primarily on Gowanus area sensors, namely the "Hoyt & 5th" sensor, this repo contains all Python code and data analysis on how variations of sensor distance measurements interacts with [local weather data](##-Weather-Data) in both Gowanus and Jamaica Bay.
+
+This analysis is performed on five deployed sensor with at least six months of measurement data captured: "Hoyt & 5th", "Carroll & 4th", "Smith & 9th", "Davenport Court" and "Russell Street".
 
 **Our goal is to better understand what internal and external factors influence variations in the baseline sensor reading of our deployed sensor in order to provide a more reliable and consistent readings.**
 <br/>
@@ -12,6 +14,6 @@ Sensor data is queried from InfluxDB using the InfluxDBClient object in Python. 
 
 ## Weather Data
 
-The Weather Data is pulled from "the_weather_scraper" Repo forked from it's original location and contains readings from 4 personal weather stations in the Gowanus area.
+The Weather Data is retrieved from SUNY Micronet weather stations via a dedicated API endpoint. Weather data is retrieved both from individual locations and as an aggregated mean across stations. Part of this research aims to assess the relative importance of hyperlocality in weather data. 
 
 ![Screen Shot 2021-08-12 at 4 15 30 PM](https://user-images.githubusercontent.com/17898669/129263486-9c334168-4a04-4425-b8e5-39272e1d074c.png)
